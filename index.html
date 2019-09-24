@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>欢迎访问 by Ruanun</title>
+	<style>html, * {-webkit-user-select:text!important; -moz-user-select:text!important;}</style>
+</head>
+<body>
+
+<script>  
+function getCurDate()  
+{  
+ var d = new Date();  
+ var week;  
+ switch (d.getDay()){  
+ case 1: week="星期一"; break;  
+ case 2: week="星期二"; break;  
+ case 3: week="星期三"; break;  
+ case 4: week="星期四"; break;  
+ case 5: week="星期五"; break;  
+ case 6: week="星期六"; break;  
+ default: week="星期天";  
+ }  
+ var years = d.getFullYear();  
+ var month = add_zero(d.getMonth()+1);  
+ var days = add_zero(d.getDate());  
+ var hours = add_zero(d.getHours());  
+ var minutes = add_zero(d.getMinutes());  
+ var seconds=add_zero(d.getSeconds());  
+ var ndate = years+"年"+month+"月"+days+"日 "+hours+":"+minutes+":"+seconds+" "+week;  
+ divT.innerHTML= ndate;  
+}  
+  
+function add_zero(temp)  
+{  
+ if(temp<10) return "0"+temp;  
+ else return temp;  
+}  
+  
+setInterval("getCurDate()",100);  
+  
+</script>
+<div id="main">
+	<br>
+	<div align="center"><b>Hello！</b></div>
+	<br>
+	<div align="center"><img src="./hj1.gif" alt="Ruanun.com"></div>
+	<br>
+	<div align="center"> <font size="6">现在是 <div id="divT"></div></font> </div> 
+</div>
+<br>
+<div align="center">  <font size="6">by Ruanun </font> </div>
+<br>
+<div align="center"> 联系:<a href=https://blog.ruanun.com>https://blog.ruanun.com<a></div>
+</body>
+</html>
