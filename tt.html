@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+</body>
+<script type="text/javascript">
+    function getUrlParams2(url) {
+        let urlStr = url.split('?')[1]
+        const urlSearchParams = new URLSearchParams(urlStr)
+        const result = Object.fromEntries(urlSearchParams.entries())
+        return result
+    }
+
+    let p = getUrlParams2(window.location.search);
+    // document.write(JSON.stringify(p))
+
+    for (let key in p) {
+        // console.log(key, p[key])
+        var divElement = document.createElement("div");
+        divElement.innerText = key + " = " + p[key]
+        document.body.appendChild(divElement)
+    }
+</script>
+</html>
